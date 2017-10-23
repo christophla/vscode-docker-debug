@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  vscode-docker-debug:
+    container_name: vscode-docker-debug
+    environment: 
+      - ASPNETCORE_ENVIRONMENT=Development
+    build: 
+      context: ./src/api
+      dockerfile: Dockerfile.debug
+    ports:
+      - "3000:3000"

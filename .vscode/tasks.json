@@ -1,0 +1,35 @@
+{
+    "version": "0.1.0",
+    "osx": {
+        "command": "/bin/bash",
+        "options": {
+            "cwd": "${workspaceRoot}"
+        },
+        "tasks": [
+            {
+                "taskName": "compose",
+                "suppressTaskName": true,
+                "args": [
+                    "-c",
+                    "./scripts/docker-task.sh compose"
+                ],
+                "isBuildCommand": false,
+                "showOutput": "always"
+            }
+        ]
+    },
+    "windows": {
+        "tasks": [
+            {
+                "taskName": "compose",
+                "suppressTaskName": true,
+                "args": [
+                    "-c",
+                    "./scripts/docker-task.sh compose"
+                ],
+                "isBuildCommand": false,
+                "showOutput": "always"
+            }
+        ]
+    }
+}
